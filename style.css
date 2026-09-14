@@ -1,0 +1,220 @@
+/* Configuración general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Tu foto de fondo con el humo de la cancha */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('fondo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Animación que mueve los colores del degradado */
+@keyframes moverDegradado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Tarjeta contenedora con Degradado Vivo Azul y Oro */
+.card {
+    /* Mezcla de Azul Xeneize profundo con destellos Oro en los extremos */
+    background: linear-gradient(-45deg, #0a2240, #113665, #cca010, #0d2c54);
+    background-size: 400% 400%; /* Agranda el fondo para poder moverlo */
+    animation: moverDegradado 10s ease infinite; /* Cambia el color suavemente cada 10 segundos */
+    
+    width: 360px;
+    border: 2px solid rgba(243, 178, 41, 0.5); /* Borde oro sutil */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: white;
+}
+
+/* Banner superior (Franja Oro limpia con brillo traslúcido) */
+.card-banner {
+    height: 90px;
+    background: linear-gradient(135deg, rgba(243, 178, 41, 0.9), rgba(204, 160, 16, 0.9));
+    box-shadow: inset 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+/* Foto de perfil de Román flotante */
+.profile-pic {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 4px solid #0d2c54;
+    margin-top: -48px;
+    background: #f3b229;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+/* Contenido de la tarjeta */
+.card-info {
+    padding: 20px 25px 25px 25px;
+}
+
+.card-info h1 {
+    margin: 10px 0 5px 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: #f3b229;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de enlaces */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Botones con colores firmes y reales */
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+}
+
+/* TikTok Negro Sólido */
+.tiktok-btn {
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tiktok-btn:hover {
+    border-color: #25f4ee;
+    box-shadow: 0 6px 15px rgba(37, 244, 238, 0.3);
+}
+
+/* Kick Verde Sólido con Letras Negras */
+.kick-btn {
+    background: #53fc18;
+    color: #000000 !important;
+    border: 1px solid #53fc18;
+}
+
+.kick-btn:hover {
+    background: #44cf12;
+    box-shadow: 0 6px 15px rgba(83, 252, 24, 0.5);
+}
+
+/* Reproductor de Música Inferior */
+.music-player {
+    background: rgba(7, 25, 49, 0.85); /* Un cierre oscuro semi-traslúcido */
+    backdrop-filter: blur(5px);
+    padding: 18px 25px;
+    border-top: 2px solid rgba(243, 178, 41, 0.4);
+}
+
+.player-title {
+    font-size: 12px;
+    color: #f3b229;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botón Play Amarillo */
+.control-btn {
+    background: #f3b229;
+    border: none;
+    color: #0d2c54;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Botón Play con el Escudo de Boca */
+.control-btn {
+    background: transparent; /* Quitamos el círculo amarillo */
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Estilo de la imagen del escudo adentro del botón */
+.btn-escudo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Brilla un poco al pasar el mouse */
+}
+
+/* Efecto opcional: cuando la música suena, el escudo pulsa suavemente */
+.playing {
+    animation: pulsoEscudo 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsoEscudo {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+
+/* Barra de progreso */
+.progress-bar-container {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.15);
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #f3b229;
+    width: 0%;
+    height: 100%;
+}
+

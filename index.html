@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuta - Xeneize Bio Link</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos oficiales para las redes sociales y reproductor -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Tarjeta Principal con Degradado Vivo -->
+    <div class="card">
+        <!-- Banner superior Amarillo Oro -->
+        <div class="card-banner"></div>
+        
+        <!-- Foto de perfil de Román (debe llamarse perfil.jpg en tu carpeta) -->
+        <img src="perfil.jpg" alt="Foto de perfil" class="profile-pic">
+        
+        <!-- Información de Perfil -->
+        <div class="card-info">
+            <h1>Tuta</h1>
+            <p class="subtitle">Xeneize a morir 💙💛💙</p>
+            
+            <!-- Botones de Redes Sociales con tus links reales corregidos -->
+            <div class="links-container">
+                <!-- Enlace de desvío limpio para TikTok -->
+                <a href="https://tiktok.com" target="_blank" class="btn-link tiktok-btn">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <!-- Enlace de desvío limpio para Kick -->
+                <a href="https://kick.com" target="_blank" class="btn-link kick-btn">
+                    <i class="fas fa-gamepad"></i> Kick
+                </a>
+            </div>
+        </div>
+
+        <!-- Reproductor de música interactivo -->
+        <div class="music-player">
+            <div class="player-title">Mon Laferte - Tu falta de querer</div>
+            <div class="player-controls">
+                <!-- Botón Play con el Escudo de Boca Local (debe llamarse escudo.svg en tu carpeta) -->
+                <button id="playBtn" class="control-btn">
+                    <img src="escudo.svg" alt="Play" class="btn-escudo">
+                </button>
+                <div class="progress-bar-container">
+                    <div id="progress" class="progress-bar"></div>
+                </div>
+            </div>
+            <!-- Archivo de audio (debe llamarse musica.mp3 en tu carpeta) -->
+            <audio id="audioTrack" src="musica.mp3"></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
